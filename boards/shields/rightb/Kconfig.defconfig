@@ -3,4 +3,7 @@ if SHIELD_RIGHTB
 config ZMK_KEYBOARD_NAME
     default "RightB"
 
+config SPI
+    default y
+
 endif # SHIELD_RIGHTB
