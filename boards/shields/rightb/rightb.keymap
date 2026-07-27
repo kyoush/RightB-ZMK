@@ -12,8 +12,41 @@
 
         default_layer {
             bindings = <
-                &kp A &kp B
-                &kp C &kp D
+                /* Row 0 */
+                &kp ESC     &kp F1      &kp F2      &kp F3
+                &kp F4      &kp F5      &kp F8      &kp F9
+                &kp F10     &kp F11     &kp F12     &kp PSCRN
+                &kp DEL     &kp C_MUTE
+
+                /* Row 1 */
+                &kp GRAVE   &kp N1      &kp N2      &kp N3
+                &kp N4      &kp F6      &kp F7      &kp N8
+                &kp N9      &kp N0      &kp MINUS   &kp EQUAL
+                &kp BSPC    &kp HOME
+
+                /* Row 2 */
+                &kp TAB     &kp Q       &kp W       &kp E
+                &kp R       &kp N5      &kp N7      &kp U
+                &kp O       &kp P       &kp LBKT    &kp RBKT
+                &kp BSLH    &kp END
+
+                /* Row 3 */
+                &kp CAPS    &kp A       &kp S       &kp D
+                &kp F       &kp N6      &kp Y       &kp I
+                &kp K       &kp L       &kp SEMI    &kp SQT
+                &kp ENTER   &kp UP
+
+                /* Row 4 */
+                &kp LSHFT   &kp Z       &kp X       &kp C
+                &kp V       &kp T       &kp H       &kp J
+                &kp M       &kp COMMA   &kp DOT     &kp FSLH
+                &kp RSHFT   &kp DOWN
+
+                /* Row 5 */
+                &kp LCTRL   &kp LGUI    &kp LALT    &kp SPACE
+                &trans      &kp G       &kp B       &kp N
+                &kp SPACE   &mo 1       &mo 2       &trans
+                &kp LEFT    &kp RIGHT
             >;
         };
     };
