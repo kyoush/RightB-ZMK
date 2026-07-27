@@ -1,0 +1,6 @@
+if SHIELD_RIGHTB
+
+config ZMK_KEYBOARD_NAME
+    default "RightB"
+
+endif # SHIELD_RIGHTB
