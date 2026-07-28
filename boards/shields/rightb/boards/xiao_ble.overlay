@@ -45,3 +45,7 @@
         zmk,underglow = &led_strip;
     };
 };
+
+&uicr {
+    nfct-pins-as-gpios;
+};
