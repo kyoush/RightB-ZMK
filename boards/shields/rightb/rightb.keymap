@@ -12,41 +12,40 @@
 
         default_layer {
             bindings = <
-                /* Row 0 */
+                /* Esc F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12 PrtSc Delete Encoder */
                 &kp ESC     &kp F1      &kp F2      &kp F3
-                &kp F4      &kp F5      &kp F8      &kp F9
-                &kp F10     &kp F11     &kp F12     &kp PSCRN
-                &kp DEL     &kp C_MUTE
+                &kp F4      &kp F5      &kp F6      &kp F7
+                &kp F8      &kp F9      &kp F10     &kp F11
+                &kp F12     &kp PSCRN   &kp DEL     &kp C_MUTE
 
-                /* Row 1 */
+                /* ` 1 2 3 4 5 6 7 8 9 0 - = Backspace Home */
                 &kp GRAVE   &kp N1      &kp N2      &kp N3
-                &kp N4      &kp F6      &kp F7      &kp N8
-                &kp N9      &kp N0      &kp MINUS   &kp EQUAL
-                &kp BSPC    &kp HOME
+                &kp N4      &kp N5      &kp N6      &kp N7
+                &kp N8      &kp N9      &kp N0      &kp MINUS
+                &kp EQUAL   &kp BSPC    &kp HOME
 
-                /* Row 2 */
+                /* Tab Q W E R T Y U I O P [ ] \ End */
                 &kp TAB     &kp Q       &kp W       &kp E
-                &kp R       &kp N5      &kp N7      &kp U
-                &kp O       &kp P       &kp LBKT    &kp RBKT
-                &kp BSLH    &kp END
+                &kp R       &kp T       &kp Y       &kp U
+                &kp I       &kp O       &kp P       &kp LBKT
+                &kp RBKT    &kp BSLH    &kp END
 
-                /* Row 3 */
+                /* Caps A S D F G H J K L ; ' Enter Up */
                 &kp CAPS    &kp A       &kp S       &kp D
-                &kp F       &kp N6      &kp Y       &kp I
+                &kp F       &kp G       &kp H       &kp J
                 &kp K       &kp L       &kp SEMI    &kp SQT
                 &kp ENTER   &kp UP
 
-                /* Row 4 */
+                /* LShift Z X C V B N M , . / RShift Down */
                 &kp LSHFT   &kp Z       &kp X       &kp C
-                &kp V       &kp T       &kp H       &kp J
-                &kp M       &kp COMMA   &kp DOT     &kp FSLH
-                &kp RSHFT   &kp DOWN
+                &kp V       &kp B       &kp N       &kp M
+                &kp COMMA   &kp DOT     &kp FSLH    &kp RSHFT
+                &kp DOWN
 
-                /* Row 5 */
+                /* LCtrl LGui LAlt LSpace RSpace Fn1 Fn2 Left Right */
                 &kp LCTRL   &kp LGUI    &kp LALT    &kp SPACE
-                &trans      &kp G       &kp B       &kp N
-                &kp SPACE   &mo 1       &mo 2       &trans
-                &kp LEFT    &kp RIGHT
+                &kp SPACE   &mo 1       &mo 2       &kp LEFT
+                &kp RIGHT
             >;
         };
     };
