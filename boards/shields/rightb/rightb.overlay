@@ -8,10 +8,10 @@
 
 / {
     chosen {
-        zmk,physical-layout = &default_layout;
+        zmk,physical-layout = &physical_layout0;
     };
 
-    kscan: kscan {
+    kscan0: kscan {
         // If the hardware does not use a switch matrix, change this to the
         // appropriate driver and update the properties below to match.
         // See https://zmk.dev/docs/config/kscan for supported key scan drivers.
@@ -51,7 +51,7 @@
             ;
     };
 
-    default_transform: default_transform {
+    matrix_transform0: matrix_transform {
         // See https://zmk.dev/docs/development/hardware-integration/new-shield#matrix-transform
         // for how to configure this
         compatible = "zmk,matrix-transform";
