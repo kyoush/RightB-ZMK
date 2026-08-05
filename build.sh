@@ -1,11 +1,14 @@
 #!/usr/bin/env bash
 set -eu
 
+WORKSPACE="$HOME/src/zmk"
+
 CONTAINER_ID="$(
-  docker ps \
-    --filter 'label=devcontainer.local_folder=/home/kyoshi/src/zmk' \
-    --format '{{.ID}}' \
-    | head -n 1
+  devcontainer up \
+    --workspace-folder "$WORKSPACE" \
+    --log-format json \
+    2>/dev/null \
+  | jq -r 'select(.containerId) | .containerId'
 )"
 
 if [ -z "$CONTAINER_ID" ]; then
@@ -16,13 +19,15 @@ fi
 docker exec -it "$CONTAINER_ID" bash -lc '
 cd /workspaces/zmk
 
+# Enable USB logging (CDC ACM) for development.
 west build \
-  -p always \
   -s app \
   -d build \
   -b xiao_ble \
+  -S zmk-usb-logging \
   -- \
   -DZMK_CONFIG=/workspaces/zmk-config/config \
   -DZMK_EXTRA_MODULES=/workspaces/zmk-config \
-  -DSHIELD=rightb
+  -DSHIELD=rightb \
+  -DCONFIG_ZMK_STUDIO=y
 '
