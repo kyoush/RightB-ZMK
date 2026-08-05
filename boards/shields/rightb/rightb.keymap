@@ -11,6 +11,8 @@
         compatible = "zmk,keymap";
 
         default_layer {
+            display-name = "Base";
+
             bindings = <
                 /* Esc F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12 PrtSc Delete Encoder */
                 &kp ESC     &kp F1      &kp F2      &kp F3
@@ -44,9 +46,17 @@
 
                 /* LCtrl LGui LAlt LSpace RSpace Fn1 Fn2 Left Right */
                 &kp LCTRL   &kp LGUI    &kp LALT    &kp SPACE
-                &kp SPACE   &mo 1       &mo 2       &kp LEFT
-                &kp RIGHT
+                &kp SPACE   &mo 1       &studio_unlock
+                &kp LEFT    &kp RIGHT
             >;
+        };
+
+        extra1 {
+            status = "reserved";
+        };
+
+        extra2 {
+            status = "reserved";
         };
     };
 };
