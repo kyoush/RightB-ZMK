@@ -49,6 +49,8 @@
                 &kp SPACE   &mo 1       &studio_unlock
                 &kp LEFT    &kp RIGHT
             >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         extra1 {
