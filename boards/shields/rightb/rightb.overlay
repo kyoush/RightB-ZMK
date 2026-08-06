@@ -100,13 +100,25 @@
         compatible = "alps,ec11";
         a-gpios = <&gpio0 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        steps = <24>;
+
+        /*
+        * BOURNS PEC11R-4215F-S0024
+        *
+        * Datasheet: 24 detents / 24 pulses per revolution.
+        * ZMK EC11 driver counts all quadrature transitions (x4),
+        * therefore use 96 steps to achieve one key event per detent
+        * with triggers-per-rotation = 24.
+        */
+        steps = <96>;
+
         status = "okay";
     };
 
     sensors: sensors {
         compatible = "zmk,keymap-sensors";
         sensors = <&right_encoder>;
+
+        /* One key event per encoder detent. */
         triggers-per-rotation = <24>;
     };
 };
