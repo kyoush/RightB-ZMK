@@ -16,11 +16,12 @@ if [ -z "$CONTAINER_ID" ]; then
   exit 1
 fi
 
-docker exec -it "$CONTAINER_ID" bash -lc '
+docker exec -it "$CONTAINER_ID" bash -lc "
 cd /workspaces/zmk
 
 # Enable USB logging (CDC ACM) for development.
 west build \
+    \$@ \
   -s app \
   -d build \
   -b xiao_ble/nrf52840/zmk \
@@ -28,5 +29,5 @@ west build \
   -- \
   -DZMK_CONFIG=/workspaces/zmk-config/config \
   -DZMK_EXTRA_MODULES=/workspaces/zmk-config \
-  -DSHIELD=rightb \
-'
+  -DSHIELD=rightb
+" -- "$@"
