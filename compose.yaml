@@ -1,3 +1,13 @@
 services:
   zmk:
-    image: alpine:latest
+    container_name: rightb-zmk
+
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+
+    volumes:
+      - zmk-workspace:/workspaces/zmk
+
+volumes:
+  zmk-workspace:
