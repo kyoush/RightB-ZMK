@@ -23,7 +23,7 @@ cd /workspaces/zmk
 west build \
   -s app \
   -d build \
-  -b xiao_ble \
+  -b xiao_ble/nrf52840/zmk \
   -S zmk-usb-logging \
   -- \
   -DZMK_CONFIG=/workspaces/zmk-config/config \
