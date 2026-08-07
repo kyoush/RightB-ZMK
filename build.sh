@@ -29,5 +29,4 @@ west build \
   -DZMK_CONFIG=/workspaces/zmk-config/config \
   -DZMK_EXTRA_MODULES=/workspaces/zmk-config \
   -DSHIELD=rightb \
-  -DCONFIG_ZMK_STUDIO=y
 '
