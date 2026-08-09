@@ -1,13 +1,12 @@
 services:
   zmk:
-    container_name: rightb-zmk
-
     build:
       context: .
       dockerfile: docker/Dockerfile
-
+    working_dir: /workspaces/zmk
     volumes:
       - zmk-workspace:/workspaces/zmk
+      - .:/workspaces/zmk-config
 
 volumes:
   zmk-workspace:
