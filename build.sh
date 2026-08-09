@@ -7,7 +7,7 @@ docker compose run --rm \
     west build \
         "$@" \
         -s app \
-        -d build \
+        -d /workspaces/zmk-config/build \
         -b xiao_ble/nrf52840/zmk \
         -S studio-rpc-usb-uart \
         -- \
