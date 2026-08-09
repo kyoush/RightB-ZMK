@@ -12,5 +12,5 @@ docker compose run --rm \
         -S studio-rpc-usb-uart \
         -- \
         -DZMK_CONFIG=/workspaces/zmk-config/config \
-        -DZMK_EXTRA_MODULES=/workspaces/zmk-config \
-        -DSHIELD=rightb
+        -DZMK_EXTRA_MODULES="/workspaces/zmk-config;/workspaces/zmk-config/.zmk/modules/zmk-rgbled-widget" \
+        -DSHIELD="rightb rgbled_adapter"
