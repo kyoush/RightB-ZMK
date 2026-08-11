@@ -14,4 +14,12 @@ cd /workspaces/zmk-config
 
 zmk config user.home /workspaces/zmk-config
 zmk update
+
+cd /workspaces/zmk
+
+if [ ! -f .west/config ]; then
+    west init -l config
+fi
+
+west update
 '

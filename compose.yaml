@@ -7,6 +7,7 @@ services:
     volumes:
       - zmk-workspace:/workspaces/zmk
       - .:/workspaces/zmk-config
+      - ./config:/workspaces/zmk/config
 
 volumes:
   zmk-workspace:
