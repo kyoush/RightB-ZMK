@@ -35,8 +35,8 @@
                 &kp I       &kp O       &kp P       &kp LBKT
                 &kp RBKT    &kp BSLH    &kp END
 
-                /* Caps A S D F G H J K L ; ' Enter Up */
-                &kp CAPS    &kp A       &kp S       &kp D
+                /* LCTRL A S D F G H J K L ; ' Enter Up */
+                &kp LCTRL    &kp A       &kp S       &kp D
                 &kp F       &kp G       &kp H       &kp J
                 &kp K       &kp L       &kp SEMI    &kp SQT
                 &kp ENTER   &kp UP
