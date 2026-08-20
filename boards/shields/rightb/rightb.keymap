@@ -2,6 +2,7 @@
 // See https://zmk.dev/docs/development/hardware-integration/new-shield for more instructions.
 
 #include <behaviors.dtsi>
+#include <behaviors/rgbled_widget.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
@@ -79,7 +80,7 @@
                 /* ` 1 2 3 4 F6 F7 8 9 0 - = Backspace Home */
                 &out OUT_USB      &out OUT_BLE      &out OUT_TOG      &trans
                 &rgb_ug RGB_TOG   &rgb_ug RGB_EFF   &rgb_ug RGB_HUI   &rgb_ug RGB_HUD
-                &rgb_ug RGB_SAI   &rgb_ug RGB_SAD   &rgb_ug RGB_BRI   &rgb_ug RGB_BRD
+                &rgb_ug RGB_SAI   &rgb_ug RGB_SAD   &ind_bat          &trans
                 &trans            &trans            &trans            &trans
 
                 /* Tab Q W E R 5 7 U I O P [ ] \ End */
