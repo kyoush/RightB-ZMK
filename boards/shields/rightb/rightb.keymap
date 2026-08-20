@@ -10,6 +10,15 @@
 / {
     // Define a default keymap here.
     // See https://zmk.dev/docs/development/hardware-integration/new-shield#default-keymap.
+
+    behaviors {
+        rgb_encoder: rgb_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&rgb_ug RGB_BRD>, <&rgb_ug RGB_BRI>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -96,6 +105,8 @@
                 &trans &trans &trans &trans
                 &trans &trans &trans
             >;
+
+            sensor-bindings = <&rgb_encoder>;
         };
 
         extra2 {
