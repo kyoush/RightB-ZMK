@@ -17,38 +17,39 @@
             display-name = "Base";
 
             bindings = <
-                /* Esc F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12 PrtSc Delete Encoder */
+                /* Esc F1 F2 F3 F4 F5 F8 F9 F10 F11 F12 PrtSc Delete Encoder */
                 &kp ESC     &kp F1      &kp F2      &kp F3
-                &kp F4      &kp F5      &kp F6      &kp F7
-                &kp F8      &kp F9      &kp F10     &kp F11
-                &kp F12     &kp PSCRN   &kp DEL     &kp C_MUTE
+                &kp F4      &kp F5      &kp F8      &kp F9
+                &kp F10     &kp F11     &kp F12     &kp PSCRN
+                &kp DEL     &kp C_MUTE
 
-                /* ` 1 2 3 4 5 6 7 8 9 0 - = Backspace Home */
+                /* ` 1 2 3 4 F6 F7 8 9 0 - = Backspace Home */
                 &kp GRAVE   &kp N1      &kp N2      &kp N3
-                &kp N4      &kp N5      &kp N6      &kp N7
-                &kp N8      &kp N9      &kp N0      &kp MINUS
-                &kp EQUAL   &kp BSPC    &kp HOME
+                &kp N4      &kp F6      &kp F7      &kp N8
+                &kp N9      &kp N0      &kp MINUS   &kp EQUAL
+                &kp BSPC    &kp HOME
 
-                /* Tab Q W E R T Y U I O P [ ] \ End */
+                /* Tab Q W E R 5 7 U I O P [ ] \ End */
                 &kp TAB     &kp Q       &kp W       &kp E
-                &kp R       &kp T       &kp Y       &kp U
+                &kp R       &kp N5      &kp N7      &kp U
                 &kp I       &kp O       &kp P       &kp LBKT
                 &kp RBKT    &kp BSLH    &kp END
 
-                /* LCTRL A S D F G H J K L ; ' Enter Up */
-                &kp LCTRL    &kp A       &kp S       &kp D
-                &kp F       &kp G       &kp H       &kp J
-                &kp K       &kp L       &kp SEMI    &kp SQT
-                &kp ENTER   &kp UP
+                /* LCtrl A S D F 6 Y K L ; ' Enter Up */
+                &kp LCTRL   &kp A       &kp S       &kp D
+                &kp F       &kp N6      &kp Y       &kp K
+                &kp L       &kp SEMI    &kp SQT     &kp ENTER
+                &kp UP
 
-                /* LShift Z X C V B N M , . / RShift Down */
+                /* LShift Z X C V T H J M , . / RShift Down */
                 &kp LSHFT   &kp Z       &kp X       &kp C
-                &kp V       &kp B       &kp N       &kp M
-                &kp COMMA   &kp DOT     &kp FSLH    &kp RSHFT
-                &kp DOWN
+                &kp V       &kp T       &kp H       &kp J
+                &kp M       &kp COMMA   &kp DOT     &kp FSLH
+                &kp RSHFT   &kp DOWN
 
-                /* LCtrl LGui LAlt LSpace RSpace Fn1 Fn2 Left Right */
+                /* LCtrl LGui LAlt LSpace G Y B N RSpace Fn1 Fn2 Left Right */
                 &kp LCTRL   &kp LGUI    &kp LALT    &kp SPACE
+                &kp G       &kp Y       &kp B       &kp N
                 &kp SPACE   &mo 1       &studio_unlock
                 &kp LEFT    &kp RIGHT
             >;
@@ -60,36 +61,40 @@
             display-name = "System";
 
             bindings = <
-                /* Esc F1 F2 F3 F4 F5 F6 F7 F8 F9 F10 F11 F12 PrtSc Delete Encoder */
+                /* Esc F1 F2 F3 F4 F5 F8 F9 F10 F11 F12 PrtSc Delete Encoder */
                 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3
                 &bt BT_SEL 4  &bt BT_CLR    &bt BT_NXT    &trans
                 &trans        &trans        &trans        &trans
-                &trans        &trans        &trans        &trans
+                &trans        &trans
 
-                /* ` 1 2 3 4 5 6 7 8 9 0 - = Backspace Home */
+                /* ` 1 2 3 4 F6 F7 8 9 0 - = Backspace Home */
                 &out OUT_USB      &out OUT_BLE      &out OUT_TOG      &trans
                 &rgb_ug RGB_TOG   &rgb_ug RGB_EFF   &rgb_ug RGB_HUI   &rgb_ug RGB_HUD
                 &rgb_ug RGB_SAI   &rgb_ug RGB_SAD   &rgb_ug RGB_BRI   &rgb_ug RGB_BRD
-                &trans            &trans            &trans
+                &trans            &trans            &trans            &trans
 
+                /* Tab Q W E R 5 7 U I O P [ ] \ End */
                 &trans &trans &trans &trans
                 &trans &trans &trans &trans
                 &trans &trans &trans &trans
                 &trans &trans &trans
 
+                /* LCtrl A S D F 6 Y K L ; ' Enter Up */
                 &trans &trans &trans &trans
                 &trans &trans &trans &trans
-                &trans &trans &trans &trans
-                &trans &trans
-
-                &trans &trans &trans &trans
-                &trans &trans &trans &trans
-                &trans &trans &trans &trans
-                &trans
-
                 &trans &trans &trans &trans
                 &trans &trans &trans
+
+                /* LShift Z X C V T H J M , . / RShift Down */
+                &trans &trans &trans &trans
+                &trans &trans &trans &trans
+                &trans &trans &trans &trans
                 &trans &trans
+
+                /* LCtrl LGui LAlt LSpace G Y B N RSpace Fn1 Fn2 Left Right */
+                &trans &trans &trans &trans
+                &trans &trans &trans &trans
+                &trans &trans &trans
             >;
         };
 
