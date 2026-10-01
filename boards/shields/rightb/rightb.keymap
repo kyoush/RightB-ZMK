@@ -63,8 +63,8 @@
                 &kp M       &kp COMMA   &kp DOT     &kp FSLH
                 &kp RSHFT   &kp DOWN
 
-                /* LCtrl LGui LAlt LSpace G Y B N RSpace Fn1 Fn2 Left Right */
-                &kp LCTRL   &kp LGUI    &kp LALT    &kp SPACE
+                /* Enter LGui LAlt LSpace G Y B N RSpace Fn1 Fn2 Left Right */
+                &kp ENTER   &kp LGUI    &kp LALT    &kp SPACE
                 &kp G       &kp Y       &kp B       &kp N
                 &kp SPACE   &mo 1       &studio_unlock
                 &kp LEFT    &kp RIGHT
